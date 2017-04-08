@@ -1,0 +1,15 @@
+{% extends 'django-robokassa/base.html' %}
+
+{% block content-title %}
+<h2>Купить</h2>
+{% endblock %}
+
+{% block content %}
+
+	<form name="form" method="POST" action="{% url 'popoln' %}">
+		{% csrf_token %}
+		<input class="btn-us" type="submit" name="submit" value="купить" />
+	</form>
+	<img src="{% static 'images/robok.png' %}" alt="">
+
+{% endblock %}
